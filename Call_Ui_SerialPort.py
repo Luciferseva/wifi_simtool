@@ -87,6 +87,7 @@ class MyMainWindow(QMainWindow, Ui_Form):
             rxData = bytes(self.com.readAll())
         except:
             QMessageBox.critical(self, '严重错误', '串口接收数据错误')
+            QMessageBox.critical(self, '严重错误', '串口接收数据错误')
         if self.hexShowing_checkBox.isChecked() == False :
             try:
                 self.textEdit_Recive.insertPlainText(rxData.decode('UTF-8'))
